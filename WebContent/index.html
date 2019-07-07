@@ -1,0 +1,38 @@
+<html>
+
+<meta charset="UTF-8">
+
+<head>
+<script type="text/javascript"   src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript"   src="intercooler.js"></script>
+</head>
+<style>
+
+a {
+    background-color: #02E555
+}
+</style>
+<body>
+<form>
+ <fieldset>
+  <legend>Lookup JNDI:</legend>
+Name:<input type="text" name="jndiroot" tabindex="1"/><br/><br/>
+  <a tabindex="2" id="a" ic-post-to="servlet/ListJNDI" ic-target='#target_span'>GO</a>
+ </fieldset>
+</form>
+
+
+  
+<form action="servlet/LookupDS" method="get">
+ <fieldset>
+  <legend>Lookup DataSource:</legend>
+Name:<input type="text" name="datasource" tabindex="3"/>
+  <a id="a2" ic-post-to="servlet/LookupDS" ic-target='#target_span' tabindex="4"> LookUp</a>
+</fieldset>
+</form>
+ <fieldset>
+  <legend>Result</legend>
+  <span id="target_span"></span>
+ </fieldset>
+</body>
+</html>
